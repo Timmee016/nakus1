@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nakus Group of Companies</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --primary-green: #006400;
+      --highlight-gold: #FFD700;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .carousel-slide div,
+      .search-box {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header style="background-color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; gap: 2rem; flex-wrap: wrap;">
+    <img src="all nakus website pictures/pictures of nakus businesses logos/Nakus logo.png" alt="Nakus Logo" style="height: 50px;">
+   <nav>
+    <nav style="flex-grow: 1; display: flex; justify-content: flex-end; align-items: center; gap: 1rem;">
+      <ul style="list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0;">
+  <ul class="nav-list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="profile.html">Profile</a></li>
+    <li class="dropdown">
+      <a href="#">Businesses</a>
+      <ul class="dropdown-menu">
+        <li><a href="laundry.html">Laundry</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="transport.html">Transport</a></li>
+        <li><a href="engineering.html">Engineering</a></li>
+        <li><a href="marine.html">Marine Logistics</a></li>
+        <li><a href="surveillance.html">Surveillance</a></li>
+        <li><a href="oilgas.html">Oil & Gas</a></li>
+      </ul>
+    </li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="enquiry.html">Enquiry</a></li>
+  </ul>
+</nav>
+
+    <style>
+    :root {
+      --primary-green: #006400;
+      --highlight-gold: #FFD700;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    header {
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    header button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  header nav ul li ul {
+  /* previously may have been missing these */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  min-width: 160px;
+  z-index: 999;
+
+  /* these two lines were added to ensure hiding */
+  display: none;
+  display: none !important;
+}
+header nav ul li:hover ul {
+  display: block !important;
+}
+
+
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  position: relative;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  display: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 160px;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu li a {
+  color: #000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+    .search-box {
+      margin-left: 1rem;
+      padding: 0.3rem;
+    }
+
+    .hero-carousel {
+      height: 500px;
+      position: relative;
+    }
+
+    .carousel-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+
+    .carousel-slide.active {
+      display: block;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+.carousel-text {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.6);
+      color: var(--highlight-gold);
+      padding: 1rem 2rem;
+      max-width: 450px;
+    }
+
+
+    section {
+      padding: 3rem 1rem;
+    }
+
+   .businesses-section {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .businesses-section h2 {
+      text-align: center;
+      color: var(--highlight-gold);
+      margin-bottom: 2rem;
+    }
+
+    .business-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .business-card {
+      flex: 1 1 250px;
+      max-width: 300px;
+      text-align: center;
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+
+    .business-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+    }
+
+    .business-card h3 {
+      color: var(--leafy-green);
+      margin-top: 1rem;
+    }
+
+    .business-card p {
+      color: var(--highlight-gold);
+      font-size: 0.95rem;
+    }
+
+    .business-card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: var(--leafy-green);
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    .corporate-section ul {
+      list-style: none;
+      padding: 0;
+      font-size: 0.95rem;
+    }
+
+    .clients-section img {
+      height: 60px;
+      margin: 1rem;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    footer h4 {
+      color: var(--highlight-gold);
+      margin-bottom: 0.5rem;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+      line-height: 1.8;
+    }
+
+    footer ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer p {
+      margin: 0.3rem 0;
+    }
+
+    @media (max-width: 768px) {
+      header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .carousel-slide div,
+      .search-box {
+        max-width: 90%;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 2rem;
+      }
+    }
+    
+  </style>
+    <button style="background: none; border: none; cursor: pointer;"><i class="fas fa-search"></i></button>
+  </header>
+
+  <!-- Hero Carousel -->
+<div class="hero-carousel">
+    <div class="carousel-slide active">
+      <img src="all nakus website pictures/pictures of nakus website banners/nakus banner1(NAKUS ENGINEERING LTD).jpg" alt="Engineering Banner">
+      <div class="carousel-text">
+        <h2>Nakus Engineering Ltd</h2>
+        <p>Providing innovative and reliable engineering solutions across diverse industries.</p>
+      </div>
+    </div>
+    <div class="carousel-slide">
+      <img src="all nakus website pictures/pictures of nakus website banners/nakus banner4(laundry services).jpg" alt="Laundry Banner">
+      <div class="carousel-text">
+        <h2>Laundry Services</h2>
+        <p>Efficient and professional garment care for private and industrial needs.</p>
+      </div>
+    </div>
+    <div class="carousel-slide">
+      <img src="all nakus website pictures/pictures of nakus website banners/nakus banner2 (NAKUS CATERING SERVICES).jpg" alt="Catering Banner">
+      <div class="carousel-text">
+        <h2>Catering Services</h2>
+        <p>Delivering wholesome, hygienic meals to institutions and corporate clients across Nigeria.</p>
+      </div>
+    </div>
+    <div class="carousel-slide">
+      <img src="all nakus website pictures/pictures of nakus website banners/nakus banner2 (NAKUS transport).jpg" alt="Transport Banner">
+      <div class="carousel-text">
+        <h2>Transport Services</h2>
+        <p>Logistics and personnel mobility solutions tailored to every business size.</p>
+      </div>
+    </div>
+    <div class="carousel-slide">
+      <img src="all nakus website pictures/pictures of nakus website banners/nakus banner2 (NAKUS OIL & GAS SERVICES).jpg" alt="Oil & Gas">
+      <div class="carousel-text">
+        <h2>Oil & Gas</h2>
+        <p>Integrated energy support services with a focus on reliability and safety.</p>
+      </div>
+    </div>
+  </div>
+
+<section class="businesses-section">
+    <h2>Our Businesses</h2>
+    <div class="business-grid">
+      <div class="business-card">
+        <img src="all nakus website pictures/pictures of nakus businesses logos/-Nakus-laundry-1.png" alt="Laundry Services">
+        <h3>Laundry</h3>
+        <p>Professional and efficient garment care services tailored for both private and institutional clients.</p>
+        <a href="laundry.html">Learn More</a>
+      </div>
+      <div class="business-card">
+        <img src="all nakus website pictures/pictures of nakus businesses logos/-Nakus-catering.png" alt="Catering Services">
+        <h3>Catering</h3>
+        <p>Delivering hygienic, wholesome meals to industries, schools, and corporate organizations.</p>
+        <a href="catering.html">Learn More</a>
+      </div>
+      <div class="business-card">
+        <img src="all nakus website pictures/pictures of nakus businesses logos/-Nakus-transport.png" alt="Transport Services">
+        <h3>Transport</h3>
+        <p>Reliable and organized logistics and mobility support across Nigeria's key commercial corridors.</p>
+        <a href="transport.html">Learn More</a>
+      </div>
+      <div class="business-card">
+        <img src="all nakus website pictures/pictures of nakus businesses logos/-Nakus-engineering.png" alt="Engineering Services">
+        <h3>Engineering</h3>
+        <p>Specialized engineering services including procurement, construction, and commissioning solutions.</p>
+        <a href="engineering.html">Learn More</a>
+      </div>
+      <div class="business-card">
+        <img src="all nakus website pictures/pictures of nakus businesses logos/-Nakus-Resources-1.png" alt="Marine Services">
+        <h3>Marine Logistics</h3>
+        <p>Efficient offshore and onshore marine support services for oil and gas operations.</p>
+        <a href="marine.html">Learn More</a>
+      </div>
+      <div class="business-card">
+        <img src="all nakus website pictures/pictures of nakus businesses logos/-Nakus-surveillance.png" alt="Surveillance">
+        <h3>Surveillance</h3>
+        <p>Security services and technology-driven surveillance solutions for public and private sector clients.</p>
+        <a href="surveillance.html">Learn More</a>
+      </div>
+      <div class="business-card">
+        <img src="all nakus website pictures/pictures of nakus businesses logos/-Nakus-oilgas.png" alt="Oil and Gas">
+        <h3>Oil & Gas</h3>
+        <p>Integrated solutions for the energy sector, including procurement, logistics, and engineering support.</p>
+        <a href="oilgas.html">Learn More</a>
+      </div>
+    </div>
+  </section>
+  <!-- Corporate Section -->
+<section style="padding: 3rem 1rem; background-color: #f5f5f5;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 2rem;">
+
+    <div style="flex: 1; min-width: 250px; max-width: 300px; text-align: center;">
+      <i class="fas fa-eye" style="font-size: 2rem; color: var(--highlight-gold);"></i>
+      <h3 style="color: var(--highlight-gold);">Our Corporate Vision</h3>
+      <p style="color: var(--primary-green); font-size: 0.95rem;">To be the most trusted, diverse and resilient indigenous conglomerate that delivers premium quality services in Oil and Gas, Procurement, Logistics, Marine and Engineering solutions across Africa and beyond.</p>
+    </div>
+
+    <div style="flex: 1; min-width: 250px; max-width: 300px; text-align: center;">
+      <i class="fas fa-bullseye" style="font-size: 2rem; color: var(--highlight-gold);"></i>
+      <h3 style="color: var(--highlight-gold);">Our Mission</h3>
+      <p style="color: var(--primary-green); font-size: 0.95rem;">To develop lasting partnerships with our clients by providing superior value through innovative and sustainable solutions delivered with integrity and excellence.</p>
+    </div>
+
+    <div style="flex: 1; min-width: 250px; max-width: 300px; text-align: center;">
+      <i class="fas fa-gem" style="font-size: 2rem; color: var(--highlight-gold);"></i>
+      <h3 style="color: var(--highlight-gold);">Our Core Values</h3>
+      <ul style="color: var(--primary-green); list-style: none; padding: 0; font-size: 0.95rem;">
+        <li>• Integrity</li>
+        <li>• Excellence</li>
+        <li>• Accountability</li>
+        <li>• Safety</li>
+        <li>• Sustainability</li>
+      </ul>
+    </div>
+
+    <div style="flex: 1; min-width: 250px; max-width: 300px; text-align: center;">
+      <i class="fas fa-briefcase" style="font-size: 2rem; color: var(--highlight-gold);"></i>
+      <h3 style="color: var(--highlight-gold);">Our Corporate Objective</h3>
+      <p style="color: var(--primary-green); font-size: 0.95rem;">To continually provide and improve quality service delivery that aligns with global standards, while strengthening Nigeria’s local content development.</p>
+    </div>
+
+  </div>
+</section>
+
+
+  <section style="padding: 3rem 1rem; background-color: #fff;">
+    <h2 style="text-align: center; color: var(--primary-green); margin-bottom: 2rem;">Our Clients</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+      <img src="all nakus website pictures/pictures of nakus website clients logos/2688899.jpg" alt="Client 1" style="height: 60px;">
+      <img src="all nakus website pictures/pictures of nakus website clients logos/NECONDEENERGY.png" alt="Client 2" style="height: 60px;">
+      <img src="all nakus website pictures/pictures of nakus website clients logos/ndpc-logo.jpg" alt="Client 1" style="height: 60px;">
+      <img src="all nakus website pictures/pictures of nakus website clients logos/shell_logo-1"alt="Client 2" style="height: 60px;">
+      
+      <!-- Add more logos as needed -->
+    </div>
+  </section>
+
+  <footer style="background-color: #000; color: #fff; padding: 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;">
+    <div style="flex: 1; min-width: 200px;">
+      <img src="all nakus website pictures/pictures of nakus businesses logos/Nakus logo.png" alt="Nakus Logo" style="height: 60px; margin-bottom: 1rem;">
+      <p style="margin-bottom: 0.5rem;">&copy; 2025 Nakus Group of Companies</p>
+    </div>
+
+    <div style="flex: 1; min-width: 200px;">
+      <h4 style="color: var(--highlight-gold); margin-bottom: 0.5rem;">Quick Links</h4>
+      <ul style="list-style: none; padding: 0; line-height: 1.8;">
+        <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+        <li><a href="about.html" style="color: #fff; text-decoration: none;">About Us</a></li>
+        <li><a href="services.html" style="color: #fff; text-decoration: none;">Services</a></li>
+        <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact</a></li>
+      </ul>
+    </div>
+
+    <div style="flex: 1; min-width: 200px;">
+      <h4 style="color: var(--highlight-gold); margin-bottom: 0.5rem;">Contact Us</h4>
+      <p><strong>Registered Office:</strong><br>God Rewards House, Plot 57/58 Olodi Oil & Ighogbadu Street, Off Apala Street, Warri.</p>
+      <p><strong>Business Office:</strong><br>72 Warri/Sapele Road, P.O Box 1025, Warri, Delta State.</p>
+      <p><strong>Email:</strong> info@nakusgroup.com</p>
+    </div>
+
+    <div style="flex: 1; min-width: 200px;">
+      <h4 style="color: var(--highlight-gold); margin-bottom: 0.5rem;">Telephone</h4>
+      <p style="margin: 0;">+234 (0) 803 675 9797</p>
+      <p style="margin: 0;">+234 (0) 815 089 0450</p>
+    </div>
+  </footer>
+
+  <!-- script remains unchanged -->
+<script>
+// Hero Carousel Logic
+let currentSlide = 0;
+const slides = document.querySelectorAll(".carousel-slide");
+setInterval(() => {
+  slides[currentSlide].style.display = "none";
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].style.display = "block";
+}, 4000);
+slides.forEach((slide, index) => {
+  slide.style.display = index === 0 ? "block" : "none";
+});
+
+// Search Toggle Logic
+const searchBtn = document.querySelector("header button");
+const nav = document.querySelector("header nav");
+searchBtn.addEventListener("click", () => {
+  let input = document.querySelector(".search-box");
+  if (!input) {
+    input = document.createElement("input");
+    input.className = "search-box";
+    input.type = "text";
+    input.placeholder = "Search...";
+    input.style.marginLeft = "1rem";
+    input.style.padding = "0.3rem";
+    nav.appendChild(input);
+  } else {
+    input.remove();
+  }
+});
+</script>
+</body>
+</html>
