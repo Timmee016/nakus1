@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laundry Services - Nakus Group of Companies</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    :root {
+      --primary-green: #006400;
+      --highlight-gold: #FFD700;
+      --leafy-green: #228B22;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+    header {
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1100;
+      border-bottom: 1px solid #ddd;
+    }
+    .nav-right {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    nav {
+      flex-grow: 1;
+    }
+    nav ul#navMenu {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+      justify-content: flex-end;
+    }
+    nav ul#navMenu li {
+      position: relative;
+    }
+    nav ul#navMenu li a {
+      text-decoration: none;
+      color: var(--primary-green);
+      font-weight: 600;
+    }
+    nav ul#navMenu li a:hover,
+    nav ul#navMenu li a:focus {
+      color: var(--highlight-gold);
+    }
+    nav ul#navMenu li ul.dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      padding: 0.5rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: none;
+      flex-direction: column;
+      min-width: 160px;
+      z-index: 9999;
+    }
+    nav ul#navMenu li:hover ul.dropdown-menu,
+    nav ul#navMenu li.open > ul.dropdown-menu {
+      display: flex;
+    }
+    nav ul#navMenu li ul.dropdown-menu li {
+      padding: 0.5rem 1rem;
+    }
+    nav ul#navMenu li ul.dropdown-menu li a {
+      color: var(--primary-green);
+      font-weight: normal;
+    }
+    nav ul#navMenu li ul.dropdown-menu li a:hover,
+    nav ul#navMenu li ul.dropdown-menu li a:focus {
+      color: var(--highlight-gold);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: var(--primary-green);
+    }
+    .menu-toggle:focus {
+      outline: 2px solid var(--highlight-gold);
+      outline-offset: 2px;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 50vh;
+      object-fit: cover;
+      margin-top: 1rem;
+    }
+    .content {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .content h1 {
+      color: var(--leafy-green);
+    }
+    .content p {
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.6;
+    }
+    footer {
+      background-color: #000;
+      color: #fff;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    footer h4 {
+      color: var(--highlight-gold);
+    }
+    footer ul {
+      list-style: none;
+      padding: 0;
+      line-height: 1.8;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav ul#navMenu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border-top: 1px solid #ddd;
+      }
+      nav ul#navMenu.active {
+        display: flex;
+      }
+      nav ul#navMenu li {
+        width: 100%;
+      }
+      nav ul#navMenu li ul.dropdown-menu {
+        position: static;
+        box-shadow: none;
+        padding-left: 1rem;
+      }
+      nav ul#navMenu li ul.dropdown-menu li {
+        padding: 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img
+      src="all nakus website pictures/pictures of nakus businesses logos/Nakus logo.png"
+      alt="Nakus Logo"
+      style="height: 50px"
+    />
+    <div class="nav-right">
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav>
+        <ul id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li class="dropdown">
+            <a href="#" aria-haspopup="true" aria-expanded="false">Businesses <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-menu" aria-label="submenu">
+              <li><a href="laundry.html">Laundry</a></li>
+              <li><a href="catering.html">Catering</a></li>
+              <li><a href="transport.html">Transport</a></li>
+              <li><a href="engineering.html">Engineering</a></li>
+              <li><a href="marine.html">Marine Logistics</a></li>
+              <li><a href="surveillance.html">Surveillance</a></li>
+              <li><a href="oilgas.html">Oil & Gas</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <img
+    src="all nakus website pictures/pictures on nakus website pages/nakus laundry page.jpg"
+    alt="Laundry Hero"
+    class="hero-image"
+  />
+
+  <div class="content">
+    <h1>Laundry Services</h1>
+    <p>
+      At Nakus Laundry, we specialize in delivering top-tier laundry services for diverse sectors including hospitality, medical, industrial,
+      and residential clients. Our state-of-the-art equipment, combined with eco-conscious detergents and expertly trained staff, ensures each
+      garment or fabric item is handled with precision and care.
+    </p>
+    <p>
+      We provide a full suite of services including washing, drying, ironing, stain treatment, and packaging. Our large-scale commercial
+      laundry solutions cater to hospitals, hotels, schools, and corporate organizations, where hygiene, timeliness, and consistency are
+      non-negotiable.
+    </p>
+    <p>
+      For individual and household clients, we offer flexible pickup and delivery options, customizable wash preferences, and special care for
+      delicate and luxury fabrics. We continuously invest in modern machinery and process innovation to reduce turnaround time and
+      environmental impact.
+    </p>
+    <p>
+      With Nakus Laundry, clients are assured of professional garment care, backed by our commitment to excellence, safety, and customer
+      satisfaction.
+    </p>
+  </div>
+
+  <footer>
+    <div>
+      <img
+        src="all nakus website pictures/pictures of nakus businesses logos/Nakus logo.png"
+        alt="Nakus Logo"
+        style="height: 60px; margin-bottom: 1rem"
+      />
+      <p>&copy; 2025 Nakus Group of Companies</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact Us</h4>
+      <p>
+        <strong>Registered Office:</strong><br />
+        God Rewards House, Plot 57/58 Olodi Oil & Ighogbadu Street, Off Apala Street, Warri.
+      </p>
+      <p>
+        <strong>Business Office:</strong><br />
+        72 Warri/Sapele Road, P.O Box 1025, Warri, Delta State.
+      </p>
+      <p><strong>Email:</strong> info@nakusgroup.com</p>
+      <p>
+        <strong>Phone:</strong><br />
+        +234 (0) 803 675 9797<br />
+        +234 (0) 815 089 0450
+      </p>
+      <div style="margin-top: 1rem;">
+        <a href="#" style="margin-right: 10px;"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" style="margin-right: 10px;"><i class="fab fa-twitter"></i></a>
+        <a href="#" style="margin-right: 10px;"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle nav menu on small screens
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.getElementById("navMenu");
+    const dropdown = document.querySelector(".dropdown > a");
+
+    menuToggle.addEventListener("click", () => {
+      const expanded = menuToggle.getAttribute("aria-expanded") === "true" || false;
+      menuToggle.setAttribute("aria-expanded", !expanded);
+      navMenu.classList.toggle("active");
+    });
+
+    // Toggle dropdown submenu on small screens
+    dropdown.addEventListener("click", (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const parentLi = dropdown.parentElement;
+        const isOpen = parentLi.classList.contains("open");
+        if (isOpen) {
+          parentLi.classList.remove("open");
+          dropdown.setAttribute("aria-expanded", "false");
+        } else {
+          parentLi.classList.add("open");
+          dropdown.setAttribute("aria-expanded", "true");
+        }
+      }
+    });
+  </script>
+</body>
+</html>

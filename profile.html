@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CEO Profile - Nakus Group of Companies</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    :root {
+      --primary-green: #006400;
+      --highlight-gold: #FFD700;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #000;
+      line-height: 1.6;
+    }
+
+    /* Header / Nav */
+    header[role="banner"] {
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      height: 50px;
+      display: block;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .menu-toggle,
+    .search-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      color: var(--primary-green);
+    }
+
+    .menu-toggle:focus,
+    .search-toggle:focus {
+      outline: 2px solid var(--highlight-gold);
+      outline-offset: 2px;
+    }
+
+    nav[role="navigation"] {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+
+    .nav-list li {
+      position: relative;
+    }
+
+    .nav-list li a {
+      color: var(--primary-green);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .nav-list li a:hover,
+    .nav-list li a:focus {
+      color: var(--highlight-gold);
+    }
+
+    /* Dropdown */
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      list-style: none;
+      padding: 0.5rem 0;
+      margin: 0;
+      display: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      min-width: 220px;
+      z-index: 1000;
+    }
+
+    .dropdown-menu li {
+      padding: 0.4rem 1rem;
+    }
+
+    .dropdown-menu li a {
+      color: var(--primary-green);
+      display: block;
+    }
+
+    .dropdown-menu li a:hover,
+    .dropdown-menu li a:focus {
+      color: var(--highlight-gold);
+    }
+
+    .dropdown:hover > .dropdown-menu,
+    .dropdown.open > .dropdown-menu {
+      display: block;
+    }
+
+    /* Profile Section */
+    .profile-section {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .profile-section h2 {
+      color: var(--primary-green);
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .profile-section img {
+      float: left;
+      width: 150px;
+      height: auto;
+      margin-right: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000;
+      color: #fff;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    footer h4 {
+      color: var(--highlight-gold);
+      margin-bottom: 0.5rem;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+      line-height: 1.8;
+    }
+
+    footer ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer p {
+      margin: 0.3rem 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header[role="banner"] {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav[role="navigation"] {
+        width: 100%;
+        order: 3;
+      }
+
+      .nav-list {
+        flex-direction: column;
+        gap: 0;
+        display: none;
+        width: 100%;
+        background: #fff;
+        padding: 0.6rem 0;
+      }
+
+      .nav-list.active {
+        display: flex;
+      }
+
+      .nav-list li {
+        padding: 0.45rem 1rem;
+        border-top: 1px solid #f0f0f0;
+      }
+
+      .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        display: none;
+        padding-left: 0;
+      }
+
+      .dropdown.open > .dropdown-menu {
+        display: block;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<header role="banner">
+  <img src="all nakus website pictures/pictures of nakus businesses logos/Nakus logo.png" alt="Nakus Logo" class="logo" />
+
+  <div class="actions">
+    <button class="search-toggle" aria-label="Search" title="Search">
+      <i class="fas fa-search"></i>
+    </button>
+    <button class="menu-toggle" aria-label="Menu" title="Menu" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <nav role="navigation">
+    <ul class="nav-list" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li class="dropdown">
+        <a href="#" tabindex="0">Businesses <i class="fas fa-caret-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="laundry.html">Laundry</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="transport.html">Transport</a></li>
+          <li><a href="engineering.html">Engineering</a></li>
+          <li><a href="marine.html">Resources</a></li>
+          <li><a href="surveillance.html">Surveillance</a></li>
+          <li><a href="oilgas.html">Oil & Gas</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- CEO Profile Section -->
+<section class="profile-section">
+  <h2>CEO Profile</h2>
+  <p>
+    <img src="all nakus website pictures/group ceo's profile.png" alt="CEO Photo" />
+    <strong>Chief Executive Officer</strong> of Nakus Group of Companies is <strong>Mr. Newman</strong>, a dynamic and forward-thinking business leader known for his strategic vision and commitment to excellence. With a strong foundation in engineering and corporate governance, Mr. Newman has guided Nakus Group to become a trusted name across Nigeria’s Oil & Gas, Logistics, Catering, Marine, and Surveillance sectors.
+  </p>
+
+  <p>As a leader of Kusimi Community in Delta State, He has been able to forge an atmosphere of peace between the people and several oil prospecting companies including the Nigeria National Petroleum Company (NNPC) and Shell Petroleum Development Company who are doing business in the area.</p>
+
+  <p>He has been a reliable force in the Federal Government quest to curb the menace of youth restiveness among the oil producing companies across the Niger Delta.</p>
+
+  <p>Newman Kusimi is a graduate of Political Sci. from Delta State University, Abraka. He obtained a sound grooming in nitty-gritty of industrial Safety and Security from several Professional Institutions. He has obtained different training certifications from institutions as Daystar Leadership Academy, Lagos where he got the basic Certificate in Leadership and advance Leadership Certificate. He holds the Work- Place Heroes Succession Certificate from Praise Fowowe Consult, Lagos as well as the Certificate in Industrial First Aid by Shell Petroleum Development Company (SPDC).</p>
+
+  <p>He has earned a number of qualifications from the Maritime Academy Oron, Akwa Ibom State including Certificate in Fire Prevention and Fire Fighting, Certificate in Personal Survival Techniques, Certificate in Personal Safety and Social Responsibility and Certificate in Elementary First Aid. He was graded Certified Swimmer by SPDC in 2007. He bagged the HSE Certificate after his excellent performance at the training organized by G-Platinum Petro serve Limited, Warri in 2008.</p>
+
+  <p>A reliable Contractor, Kusimi holds a strategic position in the security and safety set up of SPDC. He has been involved in the Provision of Serial Surveillance on SPDC`s Flow Lines, Pipelines, Manifolds, Well heads, Helipads and Flow stations. He has also provided support services to the Joint Task Force Operations at several locations across the Niger Delta. Since 2002, He has been responsible for Civil Intervention and Provision of Field Logistics and Maintenance of SPDC facilities at Egwa 2, Odidi 2, Batan and Jones Creeks. He has been in charge of the provision of security supervisors at Okolama district of land I Eastern division of Okolama, Portharcourt since 2009. He was involved in the Emergency Refurbishing of the Awoba helipad which is been used by the SPDC flow station at Swamp I, Eastern Division, River State. His current Job detail also covers the Provision of Field Monitoring Supervisors at Gbaranubie Gas Plant in Bayelsa State.</p>
+
+  <p>His achievement in various sectors has won him accolades and honours, some of which includes: The Nigerian Golden Jubilee Award for Industrial Safety and Security in Nigeria, Development of Nigeria Merit Award for Industrial Safety and Security Services, The Security Service Award amongst others to mention but a few.</p>
+
+  <p>He is a member of the Academy of Strategic Professionals Managers of Nigeria, the Warri Chambers of Commerce, Industry, Mines and Agriculture and Shell Club, Warri, Delta state.</p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div>
+    <img src="all nakus website pictures/pictures of nakus businesses logos/Nakus logo.png" alt="Nakus Logo" style="height: 100px;" />
+    <p>&copy; 2025 Nakus Group of Companies</p>
+  </div>
+  <div>
+    <h4>Quick Links</h4>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Contact Us</h4>
+    <p><strong>Registered Office:</strong><br />God Rewards House, Plot 57/58 Olodi Oil & Ighogbadu Street, Off Apala Street, Warri.</p>
+    <p><strong>Business Office:</strong><br />72 Warri/Sapele Road, P.O Box 1025, Warri, Delta State.</p>
+    <p><strong>Email:</strong> info@nakusgroup.com</p>
+  </div>
+  <div>
+    <h4>Telephone</h4>
+    <p>+234 (0) 803 675 9797</p>
+    <p>+234 (0) 815 089 0450</p>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const navMenu = document.getElementById("navMenu");
+    navMenu.classList.toggle("active");
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".dropdown > a").forEach(dropdownToggle => {
+      dropdownToggle.addEventListener("click", function(e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          this.parentElement.classList.toggle("open");
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
