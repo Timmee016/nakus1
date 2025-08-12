@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CEO Profile - Nakus Group of Companies</title>
+  <title>CEO's Profile - Nakus Group of Companies</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
     :root {
@@ -105,7 +104,7 @@
       padding: 0.5rem 0;
       margin: 0;
       display: none;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(245, 242, 242, 0.1);
       min-width: 220px;
       z-index: 1000;
     }
@@ -129,7 +128,7 @@
       display: block;
     }
 
-    /* Profile Section */
+      /* Profile Section */
     .profile-section {
       max-width: 1000px;
       margin: 3rem auto;
@@ -152,7 +151,7 @@
       margin-bottom: 0.5rem;
     }
 
-    /* Footer */
+
     footer {
       background-color: #000;
       color: #fff;
@@ -160,34 +159,25 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      align-items: flex-start;
     }
-
     footer h4 {
       color: var(--highlight-gold);
-      margin-bottom: 0.5rem;
     }
-
     footer ul {
       list-style: none;
       padding: 0;
       line-height: 1.8;
     }
-
-    footer ul li a {
+    footer a {
       color: #fff;
       text-decoration: none;
     }
 
-    footer p {
-      margin: 0.3rem 0;
-    }
-
     /* Responsive */
     @media (max-width: 768px) {
-      header[role="banner"] {
-        flex-direction: column;
-        align-items: flex-start;
+      .menu-toggle,
+      .search-toggle {
+        display: inline-block;
       }
 
       nav[role="navigation"] {
@@ -226,7 +216,7 @@
 
       footer {
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
       }
     }
   </style>
@@ -258,7 +248,7 @@
           <li><a href="catering.html">Catering</a></li>
           <li><a href="transport.html">Transport</a></li>
           <li><a href="engineering.html">Engineering</a></li>
-          <li><a href="marine.html">Resources</a></li>
+          <li><a href="marine.html">Marine Logistics</a></li>
           <li><a href="surveillance.html">Surveillance</a></li>
           <li><a href="oilgas.html">Oil & Gas</a></li>
         </ul>
@@ -268,6 +258,7 @@
     </ul>
   </nav>
 </header>
+
 
 <!-- CEO Profile Section -->
 <section class="profile-section">
@@ -321,21 +312,23 @@
 </footer>
 
 <script>
-  function toggleMenu() {
-    const navMenu = document.getElementById("navMenu");
-    navMenu.classList.toggle("active");
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".dropdown > a").forEach(dropdownToggle => {
-      dropdownToggle.addEventListener("click", function(e) {
+    function toggleMenu() {
+      document.querySelector('nav ul').classList.toggle('active');
+    }
+    document.querySelectorAll('nav ul li.dropdown > a').forEach(item => {
+      item.addEventListener('click', function(e) {
         if (window.innerWidth <= 768) {
           e.preventDefault();
-          this.parentElement.classList.toggle("open");
+          this.parentElement.querySelector('ul').classList.toggle('active');
         }
       });
     });
-  });
+  </script>
+
+  <script>
+document.getElementById("menu-toggle").addEventListener("click", function() {
+  document.querySelector("#navbar ul").classList.toggle("show");
+});
 </script>
 
 </body>
