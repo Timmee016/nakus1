@@ -46,8 +46,7 @@
       color: #000;
       text-decoration: none;
     }
-
-    /* Header / Nav */
+/* Header / Nav */
     header[role="banner"] {
       background-color: #fff;
       display: flex;
@@ -56,9 +55,13 @@
       padding: 1rem 2rem;
       gap: 1rem;
       flex-wrap: wrap;
+      border-bottom: 1px solid #ddd;
     }
 
-    header img.logo { height: 50px; display:block; }
+    .logo {
+      height: 50px;
+      display: block;
+    }
 
     .actions {
       display: flex;
@@ -71,10 +74,11 @@
       display: none;
       background: none;
       border: none;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       cursor: pointer;
       color: var(--primary-green);
     }
+
     .menu-toggle:focus,
     .search-toggle:focus {
       outline: 2px solid var(--highlight-gold);
@@ -82,7 +86,10 @@
     }
 
     nav[role="navigation"] {
-      flex-grow: 1; display: flex; justify-content: flex-end; align-items: center;
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
     }
 
     .nav-list {
@@ -94,8 +101,20 @@
       align-items: center;
     }
 
-    .nav-list li { position: relative; }
-    .nav-list li a { color: var(--primary-green); text-decoration: none; }
+    .nav-list li {
+      position: relative;
+    }
+
+    .nav-list li a {
+      color: var(--primary-green);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .nav-list li a:hover,
+    .nav-list li a:focus {
+      color: var(--highlight-gold);
+    }
 
     /* Dropdown */
     .dropdown-menu {
@@ -111,9 +130,27 @@
       min-width: 220px;
       z-index: 1000;
     }
-    .dropdown-menu li { padding: 0.4rem 1rem; }
-    .dropdown:hover .dropdown-menu { display: block; }
 
+    .dropdown-menu li {
+      padding: 0.4rem 1rem;
+    }
+
+    .dropdown-menu li a {
+      color: var(--primary-green);
+      display: block;
+    }
+
+    .dropdown-menu li a:hover,
+    .dropdown-menu li a:focus {
+      color: var(--highlight-gold);
+    }
+
+    .dropdown:hover > .dropdown-menu,
+    .dropdown.open > .dropdown-menu {
+      display: block;
+    }
+
+    
     /* Search box style (created dynamically) */
     .search-box {
       margin-left: 1rem;
@@ -603,3 +640,4 @@
 
 </body>
 </html>
+
